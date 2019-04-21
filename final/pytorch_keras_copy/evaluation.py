@@ -6,7 +6,7 @@ from util.image import unnormalize
 
 
 def evaluate(model, dataset, device, filename):
-    image, mask, gt = zip(*[dataset[i] for i in range(8)])
+    image, mask, gt = zip(*[dataset[i] for i in range(1)])
     image = torch.stack(image)
     mask = torch.stack(mask)
     gt = torch.stack(gt)
@@ -15,7 +15,7 @@ def evaluate(model, dataset, device, filename):
     output = output.to(torch.device('cpu'))
     output_comp = mask * image + (1 - mask) * output
 
-    grid = make_grid(
-        torch.cat((unnormalize(image), unnormalize(output),
-                   unnormalize(output_comp), unnormalize(gt)), dim=0))
-    save_image(grid, filename)
+#    grid = make_grid(
+#        torch.cat((unnormalize(image), unnormalize(output),
+           
+    save_image(output, filename)
