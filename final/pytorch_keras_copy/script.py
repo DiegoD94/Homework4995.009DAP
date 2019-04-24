@@ -6,6 +6,6 @@ if os.listdir('./data/val_large') != []:
     os.system('rm  ./data/val_large/*')
 if os.listdir('./mask') != []:
     os.system('rm ./mask/*')
-os.system('mv '+str(image_path)+' ./data/val_larget')
-os.system('mv '+str(mask_path)+' ./mask')
+os.system('cp '+str(image_path)+' ./data/val_large')
+os.system('cp '+str(mask_path)+' ./mask')
 os.system('python test.py --snapshot 1000000.pth')
