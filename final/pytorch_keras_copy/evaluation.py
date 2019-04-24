@@ -18,4 +18,4 @@ def evaluate(model, dataset, device, filename):
 #    grid = make_grid(
 #        torch.cat((unnormalize(image), unnormalize(output),
            
-    save_image(output, filename)
+    save_image(unnormalize(output), filename)
