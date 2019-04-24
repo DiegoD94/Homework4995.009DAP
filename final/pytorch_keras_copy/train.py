@@ -19,6 +19,7 @@ from util.io import save_ckpt
 
 class InfiniteSampler(data.sampler.Sampler):
     def __init__(self, num_samples):
+        #print(num_samples)
         self.num_samples = num_samples
 
     def __iter__(self):

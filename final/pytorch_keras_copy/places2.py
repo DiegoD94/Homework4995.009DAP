@@ -13,10 +13,10 @@ class Places2(torch.utils.data.Dataset):
 
         # use about 8M images in the challenge dataset
         if split == 'train':
-            self.paths = glob('{:s}/data_large/**/*.jpg'.format(img_root),
+            self.paths = glob('{:s}/train_large/*.jpg'.format(img_root),
                               recursive=True)
         else:
-            self.paths = glob('{:s}/{:s}_large/*'.format(img_root, split))
+            self.paths = glob('{:s}/val_large/*'.format(img_root, split))
         
         print(mask_root)
         print('{:s}/*.jpg'.format(mask_root))
