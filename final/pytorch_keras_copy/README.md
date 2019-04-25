@@ -13,8 +13,11 @@ For example, try
 ```
 python script.py image_example/Places365_val_00000102.jpg mask_example/000003.jpg
 ```
-For train,
+# For train,
+first download data from [here](),
+you can modify the training data by change the content in ./data/train/train_large/, but do not change the dictionary structure.
 ```
 python train.py --root data/train/ --mask_root train_masks/ --max_iter 1000 --vis_interval 50 --save_model_interval 250
 ```
 Do not change root and mask_root parameter, change max_iter for more traning and change vis_interval and save_model_interval properly for not explodingy your disk.
+
