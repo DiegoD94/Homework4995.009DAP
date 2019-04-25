@@ -14,7 +14,7 @@ For example, try
 python script.py image_example/Places365_val_00000102.jpg mask_example/000003.jpg
 ```
 # For train,
-first download data from [here](),
+first download data from [here](https://drive.google.com/file/d/1qPteJp8YsczhSwB8thJwkUDs1pTu-VQk/view?usp=sharing), loggin with your lionmail
 you can modify the training data by change the content in ./data/train/train_large/, but do not change the dictionary structure.
 ```
 python train.py --root data/train/ --mask_root train_masks/ --max_iter 1000 --vis_interval 50 --save_model_interval 250
